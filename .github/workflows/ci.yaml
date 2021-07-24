@@ -3,11 +3,12 @@ on:
   pull_request:
     branches:
       - dev
-strategy:
-  matrix:
-    go: ['1.14','1.15']
+
 jobs: 
   check-app:
+    strategy:
+      matrix:
+        go: ['1.14','1.15']
     runs-on: ubuntu-latest
     
     steps:
